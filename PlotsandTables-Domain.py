@@ -10,9 +10,9 @@ from typing import Dict, List, Optional
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Process ASR results across different systems')
-    parser.add_argument('--output-dir', type=str, default="/big/users/kat-mcmillan/whisper-4o",
+    parser.add_argument('--output-dir', type=str, default="/path/to/default/",
                       help='Directory to save all outputs')
-    parser.add_argument('--domain-mapping', type=str, default="/big/users/kat-mcmillan/dataset_domains_new.json",
+    parser.add_argument('--domain-mapping', type=str, default="path/todefault.json",
                       help='Path to domain mapping JSON file')
     return parser.parse_args()
 
@@ -232,11 +232,7 @@ def main():
 
     # Dictionary mapping file paths to system labels
     results_dict = {
-        "/big/users/kat-mcmillan/whisper-4o/gpt-mini-file_results.csv": "4o-mini",
-        "/big/users/kat-mcmillan/whisper-4o/gpt4-file_results.csv": "4o",
-        "/big/users/kat-mcmillan/whisper-4o/whisper-1-file_results.csv": "whisper",
-        "/home/users/kat-mcmillan/projects/benchmarks/gmc/nova-3-results/results.csv": "nova-3",
-        "/big/quarantine/gmc_automation/en/test_results/dg.nova-2.en-US.20250106.batch.asr/results.csv": "nova-2",
+      
     }
 
     # Initialize an empty DataFrame for combined results
@@ -303,17 +299,7 @@ def main():
 
     # Custom color palette
     provider_colors = {
-        "Nova-2": "#149afb",  # Azure
-        "Nova-3": "#13ef93",  # Spring Green
-        "Assembly": "#ee028c",
-        "AWS": "#ae63f9",
-        "Google [tele]": "#bbbbbf",
-        "Google [long]": "#949498",
-        "Google [short]": "#4e4e52",
-        "RevAI": "#f04438",
-        "Whisper": "#fec84b",
-        "Speechmatics": "#12b76a",
-        "Azure": "#ae63f9"
+       
     }
     default_palette = sns.color_palette("viridis", n_colors=6)
 
