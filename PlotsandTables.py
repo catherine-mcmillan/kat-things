@@ -4,20 +4,12 @@ import matplotlib.pyplot as plt
 import os
 
 # Directory to save all outputs
-output_dir = "/big/users/kat-mcmillan/benchmarks/nova-3-medical/plotsTables"
+output_dir = "/path/to/output"
 os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
 
 # Dictionary mapping file paths to system labels
 results_dict = {
-    "/big/quarantine/gmc_automation/en/test_results/dg.349c83dc-989b-4a6c-9c67-a43abd0587d0.en.20250225.medical.batch.asr/results.json": "Nova-2-medical",
-    "/big/quarantine/gmc_automation/en/test_results/dg.3b3aabe4-608a-46ac-9585-7960a25daf1a.en.20250225.medical.batch.asr/results.json": "Nova-3-general",
-    "/big/quarantine/gmc_automation/en/test_results/dg.91d566f5-ff0d-4584-9b9b-2414a929e62e.en.20250225.medical.batch.asr/results.json": "Nova-3-medical",
-    "/big/quarantine/gmc_automation/en/test_results/aws.en-US.en.20250225.medical.CONVERSATION.batch.asr/results.json": "AWS",
-    "/big/quarantine/gmc_automation/en/test_results/azure.en-US.en.20250225.medical.batch.asr/results.json": "Azure",
-    "/big/quarantine/gmc_automation/en/test_results/revai.en-US.en.20250225.medical.batch.asr/results.json": "RevAI",
-    "/big/quarantine/gmc_automation/en/test_results/assembly.en-US.en.20250225.medical.batch.asr/results.json": "Assembly",
-    "/big/quarantine/gmc_automation/en/test_results/whisper_api.en-US.en.20250225.medical.large-v2.batch.asr/results.json": "Whisper-large",
-    "/big/quarantine/gmc_automation/en/test_results/speechmatics.en-US.en.20250225.medical.batch.asr/results.json": "Speechmatics"
+    "/path/to/results/.csv"
 }
 
 # Initialize an empty DataFrame for combined results
